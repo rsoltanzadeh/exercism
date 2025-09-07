@@ -1,0 +1,28 @@
+(ns high-scores)
+
+(defn scores
+  "Returns all scores"
+  [scores]
+  ;; function body
+  scores)
+
+(defn latest
+  "Returns the latest score"
+  [scores]
+  ;; function body
+  (last scores))
+
+(defn personal-best
+  "Returns the top (highest) score"
+  [scores]
+  ;; function body
+  (apply max scores))
+
+(defn personal-top-three
+  "Returns the top three scores"
+  [scores]
+  ;; function body
+  (->> scores
+    (sort)
+    (take-last 3)
+    (reverse)))
